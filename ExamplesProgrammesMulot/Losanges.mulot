@@ -1,0 +1,22 @@
+Mulot
+-- Cette procedure dessine
+-- un carre dont on donne 
+-- la taille en parametre
+Proc Carre (Mulot t, int taille)
+Pour i = 0 a 3
+	t.avance(taille);
+	t.tourne(90);
+Ruop
+Corp
+N = 200;
+monMulot = new Mulot(10, 10, RED);
+monMulot.baisse();
+Pour i  = 0 a 8
+	Carre(monMulot, N);
+	monMulot.avance(N / 2);
+	monMulot.tourne(45);
+	N = N*141/200;
+Ruop
+monMulot.leve();
+monMulot.avance(100);
+Tolum

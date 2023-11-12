@@ -1,0 +1,35 @@
+Tolum
+Mulot
+-- Procedure pour dessiner une maison
+Proc Maison(Mulot m, int taille)
+m.baisse();
+Pour i = 0 a 1
+	m.avance(taille/2);
+	m.tourne(90);
+	m.avance(taille);
+	m.tourne(90);
+Ruop
+m.tourne(135);
+m.avance(1414*taille/2000);
+m.tourne(-90);
+m.avance(1414*taille/2000);
+m.tourne(-45);
+m.leve();
+Corp
+
+-- Utilisation de la procedure pour dessiner
+monMulot = new Mulot(10, 100);
+-- Une maison de taille 50
+Maison(monMulot, 50);
+-- Decalage des maisons
+monMulot.tourne(90);
+monMulot.avance(10);
+monMulot.tourne(-90);
+-- Une maison de taille 75
+Maison(monMulot, 75);
+monMulot.tourne(90);
+monMulot.avance(10);
+monMulot.tourne(-90);
+-- Une maison de taille 100
+Maison(monMulot, 100);
+Tolum
