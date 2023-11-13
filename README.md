@@ -6,7 +6,8 @@ lors d'un cours d'initiation à l'informatique s'adressant à des débutants, da
 ## Utilisation
 
 Le code binaire est dans le sous répertoire Binaire_Historique/
+'''
   cd Binaire_Historique
   java -cp Mulot2.jar:antlr.jar MlTappli
-
+'''
 
