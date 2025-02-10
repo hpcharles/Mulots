@@ -1,0 +1,85 @@
+Mulot
+Proc Parallelepipede(Mulot m,int x, int y, int h, int l)
+m.baisse();
+Pour i = 1 a l
+	m.avance(h);
+	m.avance(-h);
+	m.tourne(90);	
+	m.avance(1);
+	m.tourne(-90);	
+Ruop
+m.leve();
+Corp
+
+Proc Carre()
+x = saisieEntier();
+y = saisieEntier();
+taille = saisieEntier();
+m = new Mulot(x, y, BLUE);
+Parallelepipede(m, x, y, taille, taille);
+Corp
+
+Proc Rectangle()
+x = saisieEntier();
+y = saisieEntier();
+h= saisieEntier();
+l = saisieEntier();
+m = new Mulot(x, y, YELLOW);
+Parallelepipede(m, x, y, h, l);
+Corp
+
+Proc Triangle()
+x = saisieEntier();
+y = saisieEntier();
+taille = saisieEntier();
+m = new Mulot (x, y, RED);
+m.baisse();
+m.tourne(90);
+Pour i = 0 a taille/2
+        m.avance(taille - 2 * i);
+        m.avance(-(taille -  2 * i));
+        m.tourne(90);   
+        m.avance(1);
+        m.tourne(-90);  
+        m.leve();
+        m.avance(1);
+        m.baisse();
+Ruop
+m.leve();
+Corp
+
+Proc Trait(Mulot m, int i)
+max = 600;
+m.avance(max);
+m.avance(-max);
+m.tourne(90);	
+m.avance(i);
+m.tourne(-90);		
+Corp
+Proc Quadrille()
+m = new Mulot(0, 0);
+m.baisse();
+n = new Mulot(0,0);
+n.tourne(90);
+n.baisse();
+max = 600;
+Pour i = 1 a 60
+  Trait(m, 10);
+  Trait(n, -10);
+Ruop
+Corp
+
+Si (1 == saisieEntier()) 
+Alors Quadrille();
+Is
+TantQue (1==1)
+  o = saisieEntier();
+  Si (o == 1) 
+  Alors Carre();
+  Sinon Si(o == 2)
+            Alors Triangle();
+            Sinon Rectangle();
+            Is
+  Is
+Tnat
+Tolum

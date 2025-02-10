@@ -1,0 +1,58 @@
+Mulot
+
+Proc Toit(int x, int y, int taille)
+m = new Mulot (x, y, RED);
+m.baisse();
+m.tourne(90);
+Pour i = 0 a taille/2
+	m.avance(taille - 2 * i);
+	m.avance(-(taille -  2 * i));
+	m.tourne(90);	
+	m.avance(1);
+	m.tourne(-90);	
+	m.leve();
+	m.avance(1);
+	m.baisse();
+Ruop
+m.baisse();
+Corp
+
+Proc Carre(int x, int y, int taille)
+m = new Mulot(x, y, BLUE);
+m.baisse();
+Pour i = 1 a taille
+	m.avance(taille);
+	m.avance(-taille);
+	m.tourne(90);	
+	m.avance(1);
+	m.tourne(-90);	
+Ruop
+m.leve();
+Corp
+
+Proc Cheminee(int x, int y, int taille)
+taillecheminee = taille / 2;
+m = new Mulot(x, y, GREEN);
+m.tourne(180);
+m.baisse();
+Pour i  = 1 a taille/10
+	m.avance(taillecheminee );
+	m.avance(-taillecheminee);
+	m.tourne(90);	
+	m.avance(-1);
+	m.tourne(-90);
+Ruop
+Corp
+
+Proc Maison()
+x = saisieEntier();
+y = saisieEntier();
+taille = saisieEntier();
+Cheminee(x, y, taille);
+Carre(x, y, taille);
+Toit(x,y,taille);
+Corp
+Maison();
+Maison();
+Maison();
+Tolum
