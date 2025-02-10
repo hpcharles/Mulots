@@ -1,0 +1,11 @@
+Mulot
+Proc Cercle(Mulot t, int taille, int combien)
+Pour i  = 1 a combien
+	t.avance(taille);
+	t.tourne(180-180/combien);
+Ruop
+Corp
+monBeauMulot = new Mulot(250, 250, BLUE);
+monBeauMulot.baisse();
+Cercle(monBeauMulot, 100, 9);
+Tolum

@@ -1,0 +1,54 @@
+Mulot
+
+-- https://fr.wikipedia.org/wiki/Triangle_de_Sierpi%C5%84ski
+Proc drawTriangle(int size, Mulot m)
+    m.avance(size);    m.tourne(120);
+    m.avance(size);    m.tourne(120);
+    m.avance(size);    m.tourne(120);
+Corp
+
+Proc SUn(int size, Mulot m)
+  s = size/2;
+  	drawTriangle(s, m);
+  m.avance(s) ;
+  	drawTriangle(s, m);
+  m.tourne(120);
+  m.avance(s);
+  m.tourne(240);
+  	drawTriangle(s, m);
+  m.tourne(240);
+  m.avance(s);
+  m.tourne(120);
+Corp
+
+Proc SDeux(int size, Mulot m)
+  s = size/2;
+  	SUn(s, m);
+  m.avance(s) ;
+  	SUn(s, m);
+  m.tourne(120);
+  m.avance(s);
+  m.tourne(240);
+  	SUn(s, m);
+  m.tourne(240);
+  m.avance(s);
+  m.tourne(120);
+Corp
+
+Proc STrois(int size, Mulot m)
+  s = size/2;
+  	SDeux(s, m);
+  m.avance(s) ;
+  	SDeux(s, m);
+  m.tourne(120);
+  m.avance(s);
+  m.tourne(240);
+  	SDeux(s, m);
+  m.tourne(240);
+  m.avance(s);
+  m.tourne(120);
+Corp
+
+mulot = new Mulot(10,470);
+STrois(530, mulot);
+Tolum

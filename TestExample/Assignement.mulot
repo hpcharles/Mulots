@@ -1,0 +1,54 @@
+Mulot
+
+-- function declaration
+Proc myfunc(int taille, Mulot t)
+    taille = taille +1;
+    Pour l = 1 a 4
+        t.tourne(90);
+        t.avance(taille);
+    Ruop
+    add = 4+taille;
+Corp
+
+
+
+
+
+-- table des symbol
+d = -4;
+b = 2;
+c = b;
+add = c+2;
+sub = add-4;
+mul = add*25;
+div = mul/2;
+ultimateTest = 25*2+4*6;
+ultimateTest = ultimateTest+d;
+versionA = (9*(10-2));
+versionB = (9*10-2);
+versionC = -versionB;
+
+-- creation des objects
+mulot = new Mulot(100,100,GREEN);
+mulott = new Mulot();
+mulottt = new Mulot(250,250,RED,60);
+
+-- fonction
+mulot.avance(versionB);
+mulott.avance(90);
+mulottt.avance(ultimateTest*4);
+mulottt.tourne(120);
+mulottt.leve();
+mulottt.avance(60);
+mulottt.baisse();
+mulottt.setColor(BLUE);
+mulottt.avance(90);
+mulottt.setX(250);
+mulottt.setY(250);
+mulottt.setAngle(0);
+mulottt.setColor(GREEN);
+mulottt.avance(200);
+taille = 90;
+mulottt.setColor(BLUE);
+myfunc(90,mulottt);
+Tolum

@@ -1,0 +1,13 @@
+Mulot
+
+m = new Mulot(10,100);
+m.baisse();
+m.avance(100);
+m.tourne(90);
+m.avance(100);
+m.tourne(90);
+m.avance(100);
+m.tourne(90);
+m.avance(100);
+m.tourne(90);
+Tolum

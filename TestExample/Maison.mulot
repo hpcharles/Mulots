@@ -1,0 +1,16 @@
+Mulot
+m = new Mulot(200,250,GREEN);
+taille = 100;
+m.baisse();
+m.avance(taille);
+m.tourne(-90);
+m.avance(taille/2);
+m.tourne(-90);
+m.avance(taille);
+m.tourne(-90);
+m.avance(taille/2);
+m.tourne(-45);
+m.avance(1414*taille/2000);
+m.tourne(-90);
+m.avance(1414*taille/2000);
+Tolum

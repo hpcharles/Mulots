@@ -1,0 +1,43 @@
+Mulot
+Proc Carre(Mulot m, int taille)
+Pour l = 1 a taille
+	m.avance(taille);
+	m.avance(-taille);
+	m.tourne(-90);
+	m.avance(1);
+	m.tourne(90);
+Ruop
+Corp
+Proc Pointille(Mulot t, int taille, int n)
+Pour i = 1 a n
+	t.baisse();
+	Carre(t, taille);
+	t.leve();
+	t.tourne(-90);
+	t.avance(taille);
+	t.tourne(90);
+Ruop
+Corp
+m = new Mulot(100, 100, GREEN);
+m.baisse();
+nCases = 4;
+tCases = 10;
+m.tourne(90);
+Pour i = 1 a  nCases 
+-- Non decalee
+	Pointille(m, tCases, nCases) ;
+	m.leve();
+	m.tourne(90);
+	m.avance(tCases*2*nCases - tCases);
+	m.tourne(-90);
+	m.avance(tCases);
+-- Decale
+	Pointille(m, tCases, nCases) ;
+	m.leve();
+	m.tourne(90);
+	m.avance(tCases*2*nCases+tCases);
+	m.tourne(-90);
+	m.avance(tCases);
+Ruop
+Tolum
+

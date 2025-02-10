@@ -1,0 +1,16 @@
+Mulot
+-- HE OUE HE OUE 
+Proc sommeEntier(Mulot t,int taille)
+	Pour i = 0 a taille
+		
+	Ruop 
+Corp
+n = 12;
+t = new Mulot(100,100,GREEN);
+t.avance(9*(10-2));
+t.tourne(90);
+t.avance(9*10-2);
+t.avance(-n);
+t.avance(-180);
+sommeEntier(t,n);
+Tolum

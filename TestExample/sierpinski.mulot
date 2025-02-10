@@ -1,0 +1,66 @@
+Mulot
+
+Proc drawTriangle(int size, Mulot m)
+    m.avance(size);
+    m.tourne(120);
+    m.avance(size);
+    m.tourne(120);
+    m.avance(size);
+    m.tourne(120);
+Corp
+
+
+Proc sierpinskiThree(Mulot mulot, int size)
+  
+    -- level 1
+    drawTriangle(size,mulot);
+    -- level 2
+    size = size / 2;
+
+    mulot.leve();
+    mulot.avance(size);
+    mulot.tourne(60);
+    mulot.baisse();
+
+    drawTriangle(size,mulot);
+    
+
+
+
+    -- level 3
+    size = size / 2;
+    mulot.leve();
+    mulot.tourne(120);
+    mulot.avance(size);
+
+    mulot.tourne(-120);
+    mulot.baisse();
+
+    drawTriangle(size,mulot);
+    
+    mulot.leve();
+    mulot.avance(size);
+    mulot.tourne(-120);
+    mulot.avance(size);
+    mulot.setAngle(0);
+    mulot.avance(size);
+    mulot.tourne(60);
+    mulot.baisse();
+
+    drawTriangle(size,mulot);
+    
+    mulot.leve();
+    mulot.avance(size);
+    mulot.tourne(60);
+    mulot.avance(size*2);
+    mulot.tourne(60);
+    mulot.baisse();
+
+    drawTriangle(size,mulot);
+
+Corp
+
+mulot = new Mulot(75,470,GREEN,0);
+sierpinskiThree(mulot,430);
+Tolum
+

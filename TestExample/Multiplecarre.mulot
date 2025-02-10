@@ -1,0 +1,25 @@
+Mulot
+Proc Carre (Mulot t, int taille,int positionX, int positionY,int angle)
+	t.setX(positionX);
+	t.setY(positionY);
+	t.setAngle(angle);
+Pour i = 0 a 3
+	t.avance(taille);
+	t.tourne(90);
+Ruop
+Corp
+
+-- creation du Mulot 
+	m = new Mulot(50,100,BLUE,0);
+	-- Carre positionX=50 positionY=100 Couleur=BLEU Angle=0 taille=100
+	Carre(m,100,50,100,0);
+	-- Carre positionX=300 positionY=100 Couleur=VERT Angle=20 taille=50
+	m.setColor(GREEN);
+	Carre(m,50,300,100,20);
+	-- Carre positionX=580 positionY=100 Couleur=RED Angle=45 taille=25
+	m.setColor(RED);
+	Carre(m,25,580,100,45);
+	-- Carre positionX=300 positionY=350 Couleur=YELLOW Angle=45 taille=100
+	m.setColor(YELLOW);
+	Carre(m,100,300,350,45);
+Tolum
